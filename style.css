@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------
+   GIAO DIỆN FORM (ADD / EDIT)
+   -------------------------------------- */
+.form-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 12px;
+}
+
+.form-title i {
+    color: #1677ff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-control {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #1e293b;
+    outline: none;
+    transition: all 0.2s ease;
+    background-color: #f8fafc;
+}
+
+.form-control:focus {
+    background-color: #ffffff;
+    border-color: #1677ff;
+    box-shadow: 0 0 0 4px rgba(22, 119, 255, 0.12);
+}
+
+.form-control[type="file"] {
+    background-color: #ffffff;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.btn-submit {
+    background-color: #1677ff;
+    color: #ffffff;
+    padding: 11px 22px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #0958d9;
+}
+
+.btn-cancel {
+    background-color: #f1f5f9;
+    color: #64748b;
+    padding: 11px 22px;
+    border-radius: 10px;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-cancel:hover {
+    background-color: #e2e8f0;
+    color: #334155;
+}
+
+.error-msg {
+    background-color: #fff1f0;
+    border: 1px solid #ffa39e;
+    color: #ff4d4f;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* --------------------------------------
+   GIAO DIỆN BẢNG & TRANG CHỦ (INDEX)
+   -------------------------------------- */
+.top-bar {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.search-form { flex: 1; max-width: 380px; }
+.search-box { position: relative; display: flex; align-items: center; }
+.search-icon { position: absolute; left: 14px; color: #94a3b8; font-size: 15px; }
+
+.search-box input {
+    width: 100%;
+    padding: 10px 14px 10px 40px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    color: #334155;
+}
+
+.search-box input:focus { border-color: #2563eb; }
+
+.clear-search {
+    margin-left: 10px;
+    color: #ef4444;
+    text-decoration: none !important;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.bar-actions { display: flex; align-items: center; gap: 12px; }
+
+.count-badge {
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn-add {
+    background-color: #1677ff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-add:hover { background-color: #0958d9; }
+
+.card-table {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+}
+
+table { width: 100%; border-collapse: collapse; }
+
+th {
+    background-color: #ffffff;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 18px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+tr:last-child td { border-bottom: none; }
+tr:hover td { background-color: #fafafa; }
+
+.col-id { color: #64748b; font-weight: 600; }
+
+.avatar-img {
+    width: 48px !important;
+    height: 48px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    display: block;
+}
+
+.col-name { font-weight: 700; color: #0f172a; text-align: left !important; }
+
+.status-badge {
+    background-color: #e6f7ff;
+    color: #0958d9;
+    border: 1px solid #91caef;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-badge .dot {
+    width: 6px;
+    height: 6px;
+    background-color: #1677ff;
+    border-radius: 50%;
+}
+
+.action-btns { display: flex; justify-content: center; gap: 8px; }
+
+.btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.2s;
+}
+
+.btn-edit-text {
+    background-color: #fffbe6;
+    color: #d48806 !important;
+    border: 1px solid #ffe58f;
+}
+
+.btn-edit-text:hover { background-color: #fff1b8; }
+
+.btn-delete-text {
+    background-color: #fff1f0;
+    color: #ff4d4f !important;
+    border: 1px solid #ffa39e;
+}
+
+.btn-delete-text:hover { background-color: #ffccc7; }
+
+.empty-data { text-align: center; color: #94a3b8; padding: 30px; }
